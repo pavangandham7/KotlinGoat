@@ -155,7 +155,7 @@ jobs:
         if: ${{ env.build-mode == 'manual' }}
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: ${{ env.distribution }}
           architecture: x64
           cache: ${{ env.cache }}
