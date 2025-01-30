@@ -6,7 +6,9 @@ import android.widget.EditText
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import miguel.freitas.kotlingoat.high.CodeInjection
+import miguel.freitas.kotlingoat.high.CodeeInjection
 import miguel.freitas.kotlingoat.high.CommandInjection
+import miguel.freitas.kotlingoat.high.CommanddInjection
 import miguel.freitas.kotlingoat.medium.InsecureRandom
 import miguel.freitas.kotlingoat.medium.PrivacyViolation
 import miguel.freitas.kotlingoat.medium.ProcessControl
@@ -27,7 +29,9 @@ class MainActivity : AppCompatActivity() {
         val clazz: String = getValue(R.id.clazz)
 
         CodeInjection.init(clazz)
+        CodeeInjection.init(clazz)
         CommandInjection.init(username)
+        CommanddInjection.init(username)
         PrivacyViolation.init(password, this)
         val randomPassword = InsecureRandom.getRandomPassword()
         val stringFromJNI = UseOfNativeLanguage.getStringFromJNI()
