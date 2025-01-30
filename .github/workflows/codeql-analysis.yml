@@ -181,7 +181,7 @@ jobs:
           elif find . -name "build.gradle" -o -name "build.gradle.kts" -type f | grep -q . &&  (find . -name "gradlew" -o -name "gradlew.bat" -type f | grep -q . ); then
             # If Gradle build files are found, use Gradle
             echo "Building using Gradle..."
-            ./gradlew build --no-daemon -x test
+            ./gradlew build -x test
           else
             # If no recognized build file is found, skip the build
             echo "No recognized build file found. Skipping build."
